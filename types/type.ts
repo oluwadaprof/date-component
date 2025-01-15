@@ -1,47 +1,14 @@
-export interface ProductType {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  images: string[];
-  category: Category;
-}
-
-interface Category {
-  id: number;
-  name: string;
-  image: string;
-}
-
-export interface CategoryType {
-  id: number;
-  name: string;
-  image: string;
-}
-
-export interface CartItemType {
-  id: number;
-  title: string;
-  price: number;
-  quantity: number;
-  image: string;
-}
-
-export interface NotificationType {
-  id: number;
-  title: string;
-  message: string;
-  timestamp: string;
-}
+export type TSchedule = {
+  id: string; // Unique identifier for each schedule
+  start: string;
+  end: string;
+};
 
 export type TAvailability = {
-	createdAt: string
-	schedule: {
-		start: string
-		end: string
-	}[][]
-	id: string
-	days: string
-	timeZone: string
-	isDefault: boolean
-}
+  createdAt: string;
+  schedule: TSchedule[]; // Change to an array of TSchedule
+  id: string;
+  days: string;
+  timeZone: string;
+  isDefault: boolean;
+};

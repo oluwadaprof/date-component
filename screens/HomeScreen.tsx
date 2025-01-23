@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import DayButton from "@/components/DayButton";
 
@@ -11,8 +11,6 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
 
 const Days = [
   "Monday",
